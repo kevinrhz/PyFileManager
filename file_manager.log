@@ -1,0 +1,29 @@
+2025-01-23 18:03:42,645 - INFO - File 'test_folder/test_log.txt' created successfully.
+2025-01-23 18:03:42,645 - INFO - File 'test_folder/test_log.txt' created successfully.
+2025-01-23 18:03:42,645 - INFO - Custom log message for testing.
+2025-01-23 18:21:34,977 - ERROR - Unexpected error: [Errno 30] Read-only file system: '/restricted_folder'
+2025-01-23 18:21:34,977 - ERROR - File 'non_existent_file.txt' not found.
+2025-01-23 18:30:40,881 - INFO - Directory 'test_folder' deleted successfully.
+2025-01-23 18:31:36,995 - INFO - Directory 'test_folder' created successfully.
+2025-01-23 18:31:36,996 - INFO - Listed contents of 'test_folder'.
+2025-01-23 18:31:36,996 - INFO - Directory 'test_folder' deleted successfully.
+2025-01-23 18:31:36,996 - WARNING - Directory 'non_existent_folder' not found.
+2025-01-23 18:31:36,996 - ERROR - Unexpected error when creating directory: [Errno 30] Read-only file system: '/restricted_folder'
+2025-01-23 18:31:36,996 - WARNING - Directory '/restricted_folder' not found.
+2025-01-23 18:41:39,776 - INFO - File 'test_folder/file1.txt' created successfully.
+2025-01-23 18:41:39,776 - INFO - File 'test_folder/file2.txt' created successfully.
+2025-01-23 18:41:39,776 - INFO - File 'test_folder/subfolder/file3.txt' created successfully.
+2025-01-23 18:41:39,776 - INFO - Moved 'test_folder/file1.txt' to 'moved_files'.
+2025-01-23 18:41:39,776 - INFO - Moved 'test_folder/file2.txt' to 'moved_files'.
+2025-01-23 18:41:39,776 - INFO - File 'moved_files/file1.txt' deleted successfully.
+2025-01-23 18:41:39,776 - INFO - File 'moved_files/file2.txt' deleted successfully.
+2025-01-23 18:41:39,776 - INFO - File 'test_folder/subfolder/file3.txt' deleted successfully.
+2025-01-23 18:47:40,307 - INFO - File 'test_folder/test_gui.txt' created successfully.
+2025-01-23 18:47:40,307 - INFO - File 'test_folder/test_gui.txt' deleted successfully.
+2025-01-23 20:34:26,913 - INFO - File 'gui_test_folder' created successfully.
+2025-01-23 20:34:49,445 - INFO - File 'gui_test_folder' deleted successfully.
+2025-01-23 20:53:04,305 - INFO - Directory 'young_money' created successfully.
+2025-01-23 20:53:17,429 - INFO - Directory 'young_money' deleted successfully.
+2025-01-23 21:17:23,776 - INFO - Directory 'test_folder' created successfully.
+2025-01-23 21:17:40,646 - INFO - File 'test_folder/test.txt' created successfully.
+2025-01-23 21:50:22,409 - INFO - File 'metadatatest.txt' created successfully.

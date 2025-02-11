@@ -107,7 +107,7 @@ class FileManagementApp(QWidget):
 
     # Function to get file metadata
     def get_metadata_action(self):
-        file_name = self.file_input.text().strip()
+        # file_name = self.file_input.text().strip()
 
         if not file_name:
             self.show_message("Error", "Please enter a valid file name.")
@@ -123,7 +123,7 @@ class FileManagementApp(QWidget):
 
         if isinstance(result, dict):
             metadata_info = "\n".join([f"{key}: {value}" for key, value in result.items()])
-            self.result_area.setText(metadata_info)
+            # self.result_area.setText(metadata_info)
         else:
             self.show_message("Error", result)
 

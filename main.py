@@ -18,10 +18,10 @@ from app.logger import log_event
 
 
 
-# Create a file and capture the return message
+# test
 result = create_file("test_folder/test_gui.txt", "For GUI testing")
 print(result)
 
-# Delete the file and capture the return message
+# test
 result = delete_file("test_folder/test_gui.txt")
 print(result)

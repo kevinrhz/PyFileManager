@@ -1,10 +1,12 @@
 from pathlib import Path
+import subprocess
+import platform
 from app.logger import log_event
 
 
 
 def create_file(file_name, content=""):
-    # Creates a new file with optional content if it doesnt exist, with error handling
+    """Creates a new file with optional content, if it doesnt exist. Has error handling."""
     path = Path(file_name)
     
     try:
@@ -29,7 +31,7 @@ def create_file(file_name, content=""):
 
 
 def delete_file(file_name):
-    # Deletes a file if it exists, with error handling
+    """Deletes a file if it exists, with error handling"""
     path = Path(file_name)
     
     try:
@@ -50,9 +52,27 @@ def delete_file(file_name):
         return f"An unexpected error occurred: {e}"
 
 
+def open_file(file_path):
+    """Opens a file using the default system application."""
+    path = Path(file_path)
+    if not path.exists() or not path.is_file():
+        return f"Error: File '{file_path}' not found."
+    
+    try:
+        if platform.sytem() == "Windows":
+            subprocess.run(["start", str(path)], shell=True, check=True)
+        elif platform.system() == "Darwin": # macOS
+            subprocess.run(["open", str(path)], check=True)
+        else: # Linux
+            subprocess.run(["xdg-open", str(path)], check=True)
+        
+        return f"Opened '{file_path}' successfully."
+    except Exception as e:
+        return f"Error opening file: {e}"
+
 
 def bulk_create_files(file_list):
-    # Create multiple files with optional content.
+    """Create multiple files with optional content."""
     for file_name, content in file_list:
         try:
             path = Path(file_name)
@@ -75,9 +95,8 @@ def bulk_create_files(file_list):
             return f"An unexpected error occurred: {e}"
 
 
-
 def bulk_delete_files(file_list):
-    # Deletes multiple files, with error handling
+    """Deletes multiple files, with error handling"""
     for file_name in file_list:
         try:
             path = Path(file_name)
@@ -100,7 +119,7 @@ def bulk_delete_files(file_list):
 
 
 def bulk_move_files(file_list, target_directory):
-    # Moves multiple files to a target directory
+    """Moves multiple files to a target directory"""
     target_path = Path(target_directory)
 
     try:
